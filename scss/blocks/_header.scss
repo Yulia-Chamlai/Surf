@@ -1,0 +1,209 @@
+.header {
+  position: relative;
+  height: 1080px;
+  &__title {
+    position: absolute;
+    top: 0;
+    left: -14px;
+    max-width: 467px;
+    font-size: 200px;
+    line-height: 156px;
+    font-weight: 800;
+    opacity: 6.54%;
+    color: $main-color;
+    z-index: 2;
+    text-transform: uppercase;
+  }
+  &__aside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 168px;
+    height: 1080px;
+    padding-bottom: 40px;
+    align-items: center;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+  }
+  &__nav {
+    margin: 118px auto 37px;
+  }
+  &__list {
+    width: 59px;
+    margin: 0 auto;
+    text-align: center;
+
+    span {
+      display: block;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      padding-top: 6px;
+    }
+    &-link {
+      margin-bottom: 37px;
+    }
+  }
+  &__date {
+    font-size: 70px;
+    line-height: 62px;
+    font-weight: 800;
+    text-align: center;
+    span {
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 19px;
+      display: block;
+      margin: 8px auto 10px;
+    }
+  }
+  &__search {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__place {
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+    padding-left: 19px;
+    position: relative;
+    text-align: center;
+    margin-top: 20px;
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("./images/icons/place-pointer.svg");
+      background-repeat: no-repeat;
+      left: 42px;
+      width: 11px;
+      height: 14px;
+    }
+  }
+  &-slider__info {
+    background-image: url("./images/header-slider-bg.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1080px;
+    position: relative;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  &-slider__item {
+    position: absolute;
+    right: 80px;
+    bottom: 116px;
+    &-subtitle {
+      font-size: 22px;
+      line-height: 32px;
+      letter-spacing: 7px;
+      color: rgba(255, 255, 255, 0.5);
+      margin-bottom: 5px;
+      position: relative;
+      padding-left: 104px;
+      display: inline-block;
+      &::before {
+        position: absolute;
+        content: "        ";
+        width: 80px;
+        height: 1px;
+        top: 14px;
+        left: 0;
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &-title {
+      font-weight: 800;
+      font-size: 80px;
+      line-height: 86px;
+      margin-bottom: 48px;
+    }
+    &-subtext {
+      font-size: 22px;
+      line-height: 32px;
+      letter-spacing: 7px;
+      margin-bottom: 7px;
+      position: relative;
+      padding-left: 104px;
+      display: inline-block;
+      color: rgba(255, 255, 255, 0.5);
+      &::before {
+        position: absolute;
+        content: "        ";
+        width: 80px;
+        height: 1px;
+        top: 14px;
+        left: 0;
+        background: rgba(255, 255, 255, 0.5);
+      }
+    }
+    &-text {
+      font-weight: 800;
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
+    &-link {
+      display: inline-block;
+    }
+  }
+}
+.slider-dots {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  max-width: 100%;
+  width: 920px;
+  z-index: 1;
+  &__item {
+    max-width: 920px;
+  }
+  .dots-content {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 6px;
+    border-top: 4px solid $main-color;
+    &__number {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 34px;
+    }
+    &__title {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 19px;
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  &__item.slick-current.slick-active {
+    .dots-content {
+      border-top: 4px solid $accent-color;
+    }
+  }
+}
+.slider-dots {
+  .slick-track {
+    transform: translate3d(0px, 0px, 0px) !important;
+  }
+}
+
+.slick-arrow.prev-btn,
+.slick-arrow.next-btn {
+  background: transparent;
+  width: 24px;
+  height: 20px;
+  padding: 0;
+  position: absolute;
+  top: 40px;
+  z-index: 1;
+  cursor: pointer;
+}
+.slick-arrow.prev-btn {
+  right: 124px;
+}
+.slick-arrow.next-btn {
+  right: 80px;
+}
