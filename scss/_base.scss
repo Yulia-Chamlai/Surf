@@ -3,7 +3,10 @@
 *::after {
   box-sizing: border-box;
 }
-
+/*html,
+body {
+  height: auto;
+}*/
 body {
   font-family: $main-font;
   font-weight: 400;

@@ -14,6 +14,28 @@
     z-index: 2;
     text-transform: uppercase;
   }
+  &__map {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    right: 0;
+    .root-line {
+      stroke-dashoffset: 600px;
+      stroke-dasharray: 600px;
+      animation: moveline 5s infinite 6s;
+      @keyframes moveline {
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    }
+  }
+  &__pagedown {
+    position: absolute;
+    bottom: 40px;
+    left: 209px;
+    z-index: 2;
+  }
   &__aside {
     position: absolute;
     top: 0;
@@ -79,6 +101,13 @@
       width: 11px;
       height: 14px;
     }
+  }
+  &-slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
   }
   &-slider__info {
     background-image: url("./images/header-slider-bg.jpg");
@@ -198,7 +227,7 @@
   padding: 0;
   position: absolute;
   top: 40px;
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
 }
 .slick-arrow.prev-btn {

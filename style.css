@@ -348,6 +348,10 @@ template {
           box-sizing: border-box;
 }
 
+/*html,
+body {
+  height: auto;
+}*/
 body {
   font-family: "Fira Sans", sans-serif;
   font-weight: 400;
@@ -411,6 +415,34 @@ button {
   color: #fff;
   z-index: 2;
   text-transform: uppercase;
+}
+.header__map {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.header__map .root-line {
+  stroke-dashoffset: 600px;
+  stroke-dasharray: 600px;
+  -webkit-animation: moveline 5s infinite 6s;
+          animation: moveline 5s infinite 6s;
+}
+@-webkit-keyframes moveline {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes moveline {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.header__pagedown {
+  position: absolute;
+  bottom: 40px;
+  left: 209px;
+  z-index: 2;
 }
 .header__aside {
   position: absolute;
@@ -478,6 +510,13 @@ button {
   left: 42px;
   width: 11px;
   height: 14px;
+}
+.header-slider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .header-slider__info {
   background-image: url("./images/header-slider-bg.jpg");
@@ -600,7 +639,7 @@ button {
   padding: 0;
   position: absolute;
   top: 40px;
-  z-index: 1;
+  z-index: 3;
   cursor: pointer;
 }
 
