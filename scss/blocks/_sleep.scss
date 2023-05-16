@@ -1,0 +1,100 @@
+.sleep {
+  padding: 45px 0 80px;
+  background-image: url("./images/sleep/flower.png");
+  background-repeat: no-repeat;
+  background-position: bottom right;
+
+  // .sleep__title
+
+  &__title {
+  }
+
+  // .sleep__slider
+
+  &__slider {
+    padding-top: 80px;
+  }
+
+  // .sleep__subtitle
+
+  &__subtitle {
+    padding-right: 80px;
+    position: absolute;
+    top: 172px;
+    right: 0;
+    .subtitle-right {
+      &::before {
+        right: 164px;
+      }
+    }
+  }
+}
+
+.sleep-slider {
+  // .sleep-slider__item
+
+  &__item {
+  }
+
+  // .sleep-slider__top
+
+  &__top {
+    position: relative;
+  }
+
+  // .sleep-slider__img
+
+  &__img {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top left;
+    max-width: 1100px;
+    width: 100%;
+    min-height: 770px;
+  }
+  // .sleep-slider__descr
+
+  &__descr {
+    background-repeat: no-repeat;
+    min-height: 565px;
+    background-position: right center;
+    padding: 260px 0 0 135px;
+    margin-top: -345px;
+  }
+  // .sleep-slider__descr-subtitle
+
+  &__descr-subtitle {
+    display: block;
+    &::before {
+      left: 140px;
+    }
+  }
+
+  // .sleep-slider__descr-title
+
+  &__descr-title {
+    display: inline-block;
+    position: relative;
+    padding-right: 226px;
+  }
+  &__descr-list {
+    position: absolute;
+    right: 0;
+    top: 0;
+    li {
+      display: inline-block;
+      margin-left: -24px;
+    }
+  }
+  // .sleep-slider__info
+
+  &__info {
+    .info__price-span {
+      right: 30px;
+    }
+  }
+  &__btn {
+    text-align: center;
+    padding-top: 70px;
+  }
+}

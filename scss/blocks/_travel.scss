@@ -1,6 +1,12 @@
 .travel {
-  padding: 130px 0 150px;
-
+  padding: 130px 0 265px;
+  background-image: url("./images/travel/cocktail.png");
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  .slick-arrow {
+    top: 305px;
+    opacity: 0.25;
+  }
   // .travel__subtitle
 
   &__subtitle {
@@ -17,6 +23,7 @@
 }
 
 .travel-slider {
+  padding-top: 80px;
   // .travel-slider__top
 
   &__top {
@@ -38,10 +45,18 @@
 
   &__descr {
     position: relative;
-    padding-left: 135px;
+    padding: 160px 0 0 135px;
     bottom: 112px;
+    background-repeat: no-repeat;
+    min-height: 320px;
+    background-position: right center;
+    margin-top: -160px;
   }
-
+  &__info {
+    .info__trip-span {
+      right: 5px;
+    }
+  }
   // .travel-slider__descr-subtitle
 
   &__descr-subtitle {
@@ -50,14 +65,15 @@
     }
   }
   &__descr-title {
+    width: 330px;
+    white-space: nowrap;
+    position: relative;
     img {
       padding-left: 26px;
+      position: absolute;
+      top: -8px;
+      right: -70px;
     }
-  }
-  // .travel-slider__info
-
-  &__info {
-    margin-top: 100px;
   }
 
   // .travel-slider__btn
@@ -65,55 +81,5 @@
   &__btn {
     padding-top: 66px;
     text-align: center;
-  }
-}
-
-.info {
-  display: flex;
-  padding-left: 135px;
-  // .info__item
-
-  &__item {
-    position: relative;
-    min-width: 282px;
-    height: 195px;
-    &:not(:last-child) {
-      margin-right: 57px;
-    }
-  }
-
-  // .info__subtitle
-
-  &__subtitle {
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 8px;
-    color: rgba(255, 255, 255, 0.5);
-    transform: rotate(-90deg);
-    position: absolute;
-    white-space: nowrap;
-    width: 100%;
-    left: -157px;
-    top: 129px;
-    text-align: right;
-  }
-
-  // .info__title
-
-  &__title {
-    font-size: 40px;
-    font-weight: 800;
-    width: 214px;
-
-    span {
-      font-size: 14px;
-      line-height: 36px;
-      letter-spacing: 5.25px;
-      color: rgba(255, 255, 255, 0.75);
-      font-weight: 300;
-      position: absolute;
-      right: 70px;
-      top: 32px;
-    }
   }
 }
