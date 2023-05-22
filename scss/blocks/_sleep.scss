@@ -3,12 +3,10 @@
   background-image: url("./images/sleep/flower.png");
   background-repeat: no-repeat;
   background-position: bottom right;
-
-  // .sleep__title
-
-  &__title {
+  .slick-arrow {
+    top: 305px;
+    opacity: 0.25;
   }
-
   // .sleep__slider
 
   &__slider {
@@ -31,11 +29,6 @@
 }
 
 .sleep-slider {
-  // .sleep-slider__item
-
-  &__item {
-  }
-
   // .sleep-slider__top
 
   &__top {

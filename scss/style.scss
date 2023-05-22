@@ -5,3 +5,270 @@
 @import "blocks/surf";
 @import "blocks/travel";
 @import "blocks/sleep";
+@import "blocks/shop";
+@import "blocks/footer";
+
+/////////////////////Media///////////////////////////////////////////////////////
+@media (max-width: 1440px) {
+  .header {
+    height: 100vh;
+    &__title {
+      font-size: 125px;
+      line-height: 125px;
+    }
+    &__pagedown {
+      left: 150px;
+    }
+    &__aside {
+      width: 110px;
+      height: 100vh;
+    }
+    &__logo {
+      img {
+        width: 110px;
+      }
+    }
+    &__nav {
+      margin: 25px auto 5px;
+    }
+    &-slider__info {
+      height: 100vh;
+    }
+    &__list {
+      &-link {
+        margin-bottom: 15px;
+      }
+    }
+    &__search {
+      margin-bottom: 5px;
+    }
+    &__date {
+      font-size: 50px;
+      line-height: 48px;
+    }
+    &__place {
+      font-size: 11px;
+      margin-top: 5px;
+      &::before {
+        left: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 1366px) {
+  .header {
+    &__aside {
+      display: flex;
+      height: 125px;
+      align-items: flex-start;
+      border-right: none;
+      background-color: rgba(#fff, 0.1);
+      width: auto;
+      padding-right: 25px;
+    }
+    &__nav {
+      margin: 0;
+    }
+    &__list {
+      width: auto;
+      display: flex;
+      align-items: flex-end;
+      &-link {
+        margin-bottom: 0;
+        padding: 15px;
+      }
+    }
+    &__search {
+      height: 100%;
+      padding: 35px 15px;
+    }
+    &__date {
+      padding-top: 23px;
+      span {
+        margin: 3px auto 10px;
+        min-width: 57px;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+    &__place {
+      margin-top: 39px;
+      padding-left: 34px;
+    }
+    &__map {
+      svg {
+        width: 500px;
+        height: auto;
+      }
+    }
+    &__pagedown {
+      left: 50px;
+    }
+  }
+  .slick-arrow.prev-btn,
+  .slick-arrow.next-btn {
+    top: 20px;
+  }
+
+  .slick-arrow.prev-btn {
+    right: 64px;
+  }
+  .slick-arrow.next-btn {
+    right: 20px;
+  }
+}
+@media (max-width: 1050px) {
+  .header {
+    &__nav {
+      position: absolute;
+      background-color: rgba(#000, 0.9);
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 15;
+      transform: translateX(-100%);
+      transition: all 0.5s;
+      &.active {
+        transform: translateX(0);
+      }
+    }
+    &__pagedown {
+      display: none;
+    }
+    &__menu {
+      display: block;
+    }
+    &-slider__item {
+      right: 20px;
+      bottom: 27px;
+      &-subtitle {
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 82px;
+        &::before {
+          top: 9px;
+          width: 60px;
+        }
+      }
+      &-title {
+        font-size: 50px;
+        line-height: 55px;
+        margin-bottom: 25px;
+      }
+      &-subtext {
+        font-size: 18px;
+        line-height: 19px;
+        margin-bottom: 3px;
+        padding-left: 82px;
+        &::before {
+          top: 9px;
+          width: 60px;
+        }
+      }
+      &-text {
+        font-size: 35px;
+      }
+    }
+  }
+  .slider-dots {
+    bottom: 6px;
+    right: 0;
+    left: 10px;
+    margin: 0 auto;
+    width: 920px;
+    &__item {
+      width: 130px;
+      margin-right: 25px;
+    }
+    .dots-content {
+      width: 130px;
+      &__number {
+        font-size: 18px;
+        line-height: 28px;
+      }
+      &__title {
+        line-height: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 850px) {
+  .slider-dots {
+    display: none;
+  }
+}
+@media (max-width: 540px) {
+  .header {
+    &__aside {
+      display: block;
+      width: 111px;
+      height: 100vh;
+      padding-right: 0;
+    }
+    &__list {
+      display: flex;
+      flex-direction: column;
+    }
+    &__search {
+      padding: 15px 0;
+      height: unset;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .header {
+    &__logo {
+      img {
+        width: 95px;
+      }
+    }
+    &__aside {
+      width: 95px;
+    }
+    &__map {
+      svg {
+        width: 345px;
+      }
+    }
+
+    &__search {
+      margin-bottom: 0;
+    }
+    &__date {
+      font-size: 40px;
+      line-height: 42px;
+      padding-top: 10px;
+      span {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+    &__place {
+      margin-top: 22px;
+      padding-left: 19px;
+      font-size: 10px;
+      &::before {
+        left: 10px;
+      }
+    }
+    &-slider__item {
+      &-subtitle {
+        font-size: 16px;
+        line-height: 22px;
+      }
+      &-title {
+        font-size: 35px;
+        line-height: 38px;
+        margin-bottom: 22px;
+      }
+      &-subtext {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+}

@@ -31,7 +31,7 @@ $(function () {
       '<button class="next-btn" type="button"><img src="./images/next-arrow.svg" alt="Icon"></button>',
     asNavFor: ".surf-slider",
   });
-  $(".travel-slider").slick({
+  $(".travel-slider, .shop-slider").slick({
     infinite: true,
     fade: true,
     prevArrow:
@@ -78,11 +78,27 @@ $(function () {
     let summ =
       $(".nights").val() * $(".info__summ").data("nights") +
       ($(".guests").val() - 1) * $(".info__summ").data("guests");
-    $(".info__summ").html("$" + summ);
+    $(".info__summ").html("$" + " " + summ + " USD");
   });
 
   let summ =
     $(".nights").val() * $(".info__summ").data("nights") +
     ($(".guests").val() - 1) * $(".info__summ").data("guests");
-  $(".info__summ").html("$" + summ);
+  $(".info__summ").html("$" + " " + summ + " USD");
+
+  $(".sleep-slider").slick({
+    infinite: true,
+    fade: true,
+    prevArrow:
+      '<button class="prev-btn" type="button"><img src="./images/prev-arrow.svg" alt="Icon"></button>',
+    nextArrow:
+      '<button class="next-btn" type="button"><img src="./images/next-arrow.svg" alt="Icon"></button>',
+  });
+
+  $(".shop-slider__surfboard-circle").on("click", function () {
+    $(this).toggleClass("active");
+  });
+  $(".header__menu").on("click", function () {
+    $(".header__nav").toggleClass("active");
+  });
 });
