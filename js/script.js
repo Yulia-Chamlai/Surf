@@ -13,6 +13,12 @@ $(function () {
     slidesToShow: 4,
     slidesToScroll: 4,
     asNavFor: ".header__slider",
+    responsive: [
+      {
+        breakpoint: 851,
+        settings: "unslick",
+      },
+    ],
   });
   $(".surf-slider").slick({
     slidesToShow: 8,
@@ -20,6 +26,42 @@ $(function () {
     asNavFor: ".image-slider",
     arrows: false,
     focusOnSelect: true,
+    useTransform: false,
+
+    responsive: [
+      {
+        breakpoint: 1102,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          transformEnabled: false,
+          //centerMode: true,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 966,
+        settings: {
+          slidesToShow: 2,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 875,
+        settings: {
+          slidesToShow: 2,
+          variableWidth: true,
+        },
+      },
+      {
+        breakpoint: 676,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+          variableWidth: true,
+        },
+      },
+    ],
   });
   $(".image-slider").slick({
     slidesToShow: 4,
@@ -30,6 +72,35 @@ $(function () {
     nextArrow:
       '<button class="next-btn" type="button"><img src="./images/next-arrow.svg" alt="Icon"></button>',
     asNavFor: ".surf-slider",
+    responsive: [
+      {
+        breakpoint: 1301,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 966,
+        settings: {
+          slidesToShow: 2,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 676,
+        settings: {
+          slidesToShow: 1,
+          centerMode: true,
+        },
+      },
+      {
+        breakpoint: 451,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        },
+      },
+    ],
   });
   $(".travel-slider, .shop-slider").slick({
     infinite: true,

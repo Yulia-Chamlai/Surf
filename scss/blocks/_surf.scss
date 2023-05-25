@@ -159,13 +159,14 @@
 .surf-slider {
   .slick-list {
     min-height: 635px;
+    overflow: visible;
   }
   &__dot {
     width: 23.5px;
     height: 23.5px;
     background-color: $accent-color;
     border-radius: 50%;
-    box-shadow: 0px 0px 10px rgba(74, 246, 205, 0.8378);
+    box-shadow: 0px 0px 35px rgba(74, 246, 205, 0.8378);
   }
 }
 
@@ -218,7 +219,7 @@
 
 .surf-slider {
   .slick-track {
-    transform: translate3d(0px, 0px, 0px) !important;
+    //left: 0 !important;
   }
 }
 
