@@ -26,8 +26,7 @@ $(function () {
     asNavFor: ".image-slider",
     arrows: false,
     focusOnSelect: true,
-    useTransform: false,
-
+    infinite: false,
     responsive: [
       {
         breakpoint: 1102,
