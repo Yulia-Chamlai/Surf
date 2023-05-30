@@ -55,6 +55,7 @@
     }
   }
 }
+//////////////////////////////////////////////////////////
 @media (max-width: 1366px) {
   .header {
     &__aside {
@@ -129,7 +130,7 @@
       min-height: 582px;
     }
     .slick-track {
-      //left: unset !important;
+      //transform: translate3d(0px) !important;
     }
   }
   .surf-slider__item.slick-current {
@@ -193,6 +194,106 @@
     }
   }
 }
+/////////////////////////////////////////////////////////////
+@media (max-width: 1250px) {
+  .shop {
+    padding: 0 0 100px;
+  }
+  .shop-slider {
+    &__info {
+      padding: 150px 0 0 20px;
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////////
+@media (max-width: 1200px) {
+  .surf {
+    padding: 50px 0 50px;
+  }
+  .travel {
+    padding: 0;
+  }
+  .travel-slider {
+    padding-top: 10px;
+    &__descr {
+      padding: 30px 0 0 20px;
+      min-height: 265px;
+      bottom: 10px;
+      background-position: right;
+      background-size: contain;
+      margin-top: -275px;
+    }
+  }
+  .info {
+    display: block;
+    padding-left: 20px;
+    &__item {
+      position: static;
+      height: 115px;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      position: static;
+      transform: rotate(0deg);
+      text-align-last: left;
+    }
+  }
+  .sleep-slider {
+    &__descr {
+      padding: 115px 0 0 20px;
+      min-height: 350px;
+      background-size: contain;
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////////
+@media (max-width: 1150px) {
+  .shop {
+    padding: 0 0 50px;
+  }
+  .shop-slider {
+    &__info {
+      padding: 50px 0 0 20px;
+    }
+    &__info-price {
+      margin: -9px 0 35px 0;
+    }
+    &__inner {
+      display: block;
+    }
+    &__content {
+      padding: 25px 67px 0 20px;
+    }
+    &__surfboard {
+      &-definition {
+        top: 22px;
+        left: 0px;
+        font-size: 19px;
+        width: 213px;
+        &::before {
+          display: none;
+        }
+      }
+      &-box.surfboard-box--1 {
+        .shop-slider__surfboard-definition {
+          left: -155px;
+        }
+      }
+      &-box.surfboard-box--2 {
+        .shop-slider__surfboard-definition {
+          left: 15px;
+        }
+      }
+      &-box.surfboard-box--3 {
+        .shop-slider__surfboard-definition {
+          left: 0px;
+          width: 183px;
+        }
+      }
+    }
+  }
+}
+/////////////////////////////////////////////////////////////////////
 @media (max-width: 1101px) {
   .surf {
     &__slider {
@@ -239,7 +340,7 @@
     }
   }
 }
-
+///////////////////////////////////////////////////////
 @media (max-width: 1050px) {
   .header {
     &__nav {
@@ -319,27 +420,106 @@
     }
   }
   .surf {
-    padding: 120px 0 120px;
     &__subtitle {
       padding-right: 20px;
     }
   }
+  .travel {
+    &__subtitle {
+      padding-right: 20px;
+    }
+  }
+  .travel-slider {
+    &__img {
+      min-height: 600px;
+    }
+  }
+  .sleep {
+    .slick-arrow {
+      top: 0;
+    }
+    &__subtitle {
+      padding-right: 20px;
+    }
+  }
+  .sleep-slider {
+    padding-top: 20px;
+    &__img {
+      min-height: 600px;
+    }
+  }
 }
+///////////////////////////////////////////////////////////////////
 @media (max-width: 850px) {
   .slider-dots {
     display: none;
   }
+  .sleep-slider {
+    &__descr {
+      min-height: 300px;
+    }
+    &__descr-title {
+      padding-right: 170px;
+    }
+    &__descr-list {
+      li {
+        margin-left: -36px;
+      }
+    }
+  }
+  .shop-slider {
+    &__extras {
+      padding-left: 65px;
+    }
+  }
 }
+////////////////////////////////////////////////////////////////////
+@media (max-width: 700px) {
+  .sleep-slider {
+    &__descr {
+      background-image: none !important;
+    }
+  }
+}
+
+////////////////////////////////////////////////////////////////////
 @media (max-width: 675px) {
   .surf-slider {
     .slick-list {
       padding: 0 15px !important;
     }
-    &__item.slick-slide.slick-current {
-      //width: 340px !important;
+  }
+  .shop-slider {
+    &__content {
+      flex-direction: column;
+      padding: 25px 20px 0 20px;
+    }
+    &__surfboard {
+      .surfboard-box--1 {
+        left: 193px;
+        right: 0px;
+        .shop-slider__surfboard-definition {
+          left: -181px;
+        }
+      }
+    }
+    &__extras {
+      width: 100%;
+      padding-top: 25px;
+      padding-left: 0;
+    }
+    &__extras-title {
+      text-align: center;
+    }
+    &__extras-box {
+      justify-content: space-around;
     }
   }
+  .footer {
+    padding: 50px 0 35px;
+  }
 }
+//////////////////////////////////////////////////////////////////
 @media (max-width: 540px) {
   .header {
     &__aside {
@@ -357,7 +537,20 @@
       height: unset;
     }
   }
+  .travel-slider {
+    &__descr {
+      background-image: none !important;
+      min-height: 140px;
+      padding: 0 0 0 20px;
+    }
+    &__descr-title {
+      img {
+        display: none;
+      }
+    }
+  }
 }
+//////////////////////////////////////////////////////////////////
 @media (max-width: 450px) {
   .header {
     &__logo {
@@ -425,9 +618,6 @@
       max-height: 225px;
       overflow-y: hidden;
     }
-    &__item.slick-slide.slick-current {
-      //width: 320px !important;
-    }
   }
   .image-slider {
     padding-top: 30px;
@@ -437,6 +627,70 @@
     .slick-arrow.prev-btn,
     .slick-arrow.next-btn {
       top: 0;
+    }
+  }
+  .travel__subtitle .subtitle-right::before {
+    right: 85px;
+  }
+  .travel-slider__descr-subtitle::before {
+    left: 95px;
+  }
+  .travel-slider {
+    &__btn {
+      padding-top: 20px;
+    }
+  }
+  .info {
+    &__subtitle {
+      font-size: 16px;
+      line-height: 19px;
+    }
+    &__title {
+      font-size: 35px;
+    }
+  }
+  .sleep-slider {
+    &__img {
+      min-height: 550px;
+    }
+    &__descr {
+      min-height: 250px;
+    }
+    &__descr-subtitle {
+      &::before {
+        left: 90px;
+      }
+    }
+    &__descr-list {
+      display: none;
+    }
+    &__btn {
+      padding-top: 20px;
+    }
+  }
+  .sleep__subtitle .subtitle-right::before {
+    right: 105px;
+  }
+  .shop-slider {
+    &__info {
+      padding: 50px 10px 0 10px;
+    }
+    &__info-subtitle {
+      &::before {
+        left: 70px;
+      }
+    }
+    &__info-title {
+      font-size: 35px;
+    }
+    &__extras-box {
+      min-width: 0;
+      max-height: 340px;
+      justify-content: space-between;
+    }
+    &__extras-itemtitle {
+      font-size: 16px;
+      letter-spacing: 5px;
     }
   }
 }

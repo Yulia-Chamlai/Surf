@@ -72,11 +72,9 @@
 
   &__content {
     display: flex;
-    max-height: 695px;
+    min-height: 695px;
     padding-right: 67px;
   }
-
-  // .shop-slider__img
 
   &__surfboard {
     position: relative;
@@ -96,7 +94,7 @@
       bottom: 65px;
       left: 53px;
       .shop-slider__surfboard-definition {
-        left: -365ёpx;
+        left: -365px;
         &::before {
           position: absolute;
           content: "";
@@ -187,11 +185,6 @@
     min-width: 340px;
     width: 100%;
     min-height: 220px;
-  }
-
-  // .shop-slider__extras-item
-
-  &__extras-item {
   }
 
   // .shop-slider__extras-itemimage

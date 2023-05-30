@@ -172,4 +172,5 @@ $(function () {
   $(".header__menu").on("click", function () {
     $(".header__nav").toggleClass("active");
   });
+  new WOW().init();
 });

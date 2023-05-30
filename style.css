@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
 	   ========================================================================== */
@@ -361,6 +360,7 @@ body {
   color: #fff;
   text-transform: uppercase;
   font-size: 16px;
+  min-width: 320px;
 }
 
 .container {
@@ -541,7 +541,7 @@ button {
 }
 @media (max-width: 450px) {
   .btn {
-    font-size: 38px;
+    font-size: 30px;
   }
 }
 
@@ -562,10 +562,26 @@ button {
   background-color: rgba(255, 255, 255, 0.5);
   top: 12px;
 }
+@media (max-width: 450px) {
+  .subtitle-left {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 3px;
+  }
+  .subtitle-left::before {
+    width: 60px;
+    top: 8px;
+  }
+}
 
 .title-left {
   font-weight: 800;
   font-size: 40px;
+}
+@media (max-width: 540px) {
+  .title-left {
+    font-size: 35px;
+  }
 }
 
 .info {
@@ -1423,7 +1439,7 @@ input[type="number"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-height: 695px;
+  min-height: 695px;
   padding-right: 67px;
 }
 .shop-slider__surfboard {
@@ -1445,7 +1461,7 @@ input[type="number"] {
   left: 53px;
 }
 .shop-slider__surfboard .surfboard-box--3 .shop-slider__surfboard-definition {
-  left: -365ёpx;
+  left: -365px;
 }
 .shop-slider__surfboard .surfboard-box--3 .shop-slider__surfboard-definition::before {
   position: absolute;
@@ -1777,6 +1793,95 @@ input[type="number"] {
     top: 20px;
   }
 }
+@media (max-width: 1250px) {
+  .shop {
+    padding: 0 0 100px;
+  }
+
+  .shop-slider__info {
+    padding: 150px 0 0 20px;
+  }
+}
+@media (max-width: 1200px) {
+  .surf {
+    padding: 50px 0 50px;
+  }
+
+  .travel {
+    padding: 0;
+  }
+
+  .travel-slider {
+    padding-top: 10px;
+  }
+  .travel-slider__descr {
+    padding: 30px 0 0 20px;
+    min-height: 265px;
+    bottom: 10px;
+    background-position: right;
+    background-size: contain;
+    margin-top: -275px;
+  }
+
+  .info {
+    display: block;
+    padding-left: 20px;
+  }
+  .info__item {
+    position: static;
+    height: 115px;
+    margin-bottom: 20px;
+  }
+  .info__subtitle {
+    position: static;
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    text-align-last: left;
+  }
+
+  .sleep-slider__descr {
+    padding: 115px 0 0 20px;
+    min-height: 350px;
+    background-size: contain;
+  }
+}
+@media (max-width: 1150px) {
+  .shop {
+    padding: 0 0 50px;
+  }
+
+  .shop-slider__info {
+    padding: 50px 0 0 20px;
+  }
+  .shop-slider__info-price {
+    margin: -9px 0 35px 0;
+  }
+  .shop-slider__inner {
+    display: block;
+  }
+  .shop-slider__content {
+    padding: 25px 67px 0 20px;
+  }
+  .shop-slider__surfboard-definition {
+    top: 22px;
+    left: 0px;
+    font-size: 19px;
+    width: 213px;
+  }
+  .shop-slider__surfboard-definition::before {
+    display: none;
+  }
+  .shop-slider__surfboard-box.surfboard-box--1 .shop-slider__surfboard-definition {
+    left: -155px;
+  }
+  .shop-slider__surfboard-box.surfboard-box--2 .shop-slider__surfboard-definition {
+    left: 15px;
+  }
+  .shop-slider__surfboard-box.surfboard-box--3 .shop-slider__surfboard-definition {
+    left: 0px;
+    width: 183px;
+  }
+}
 @media (max-width: 1101px) {
   .surf__slider {
     background-image: none;
@@ -1907,21 +2012,90 @@ input[type="number"] {
     line-height: 16px;
   }
 
-  .surf {
-    padding: 120px 0 120px;
-  }
   .surf__subtitle {
     padding-right: 20px;
+  }
+
+  .travel__subtitle {
+    padding-right: 20px;
+  }
+
+  .travel-slider__img {
+    min-height: 600px;
+  }
+
+  .sleep .slick-arrow {
+    top: 0;
+  }
+  .sleep__subtitle {
+    padding-right: 20px;
+  }
+
+  .sleep-slider {
+    padding-top: 20px;
+  }
+  .sleep-slider__img {
+    min-height: 600px;
   }
 }
 @media (max-width: 850px) {
   .slider-dots {
     display: none;
   }
+
+  .sleep-slider__descr {
+    min-height: 300px;
+  }
+  .sleep-slider__descr-title {
+    padding-right: 170px;
+  }
+  .sleep-slider__descr-list li {
+    margin-left: -36px;
+  }
+
+  .shop-slider__extras {
+    padding-left: 65px;
+  }
+}
+@media (max-width: 700px) {
+  .sleep-slider__descr {
+    background-image: none !important;
+  }
 }
 @media (max-width: 675px) {
   .surf-slider .slick-list {
     padding: 0 15px !important;
+  }
+
+  .shop-slider__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 25px 20px 0 20px;
+  }
+  .shop-slider__surfboard .surfboard-box--1 {
+    left: 193px;
+    right: 0px;
+  }
+  .shop-slider__surfboard .surfboard-box--1 .shop-slider__surfboard-definition {
+    left: -181px;
+  }
+  .shop-slider__extras {
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 0;
+  }
+  .shop-slider__extras-title {
+    text-align: center;
+  }
+  .shop-slider__extras-box {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+
+  .footer {
+    padding: 50px 0 35px;
   }
 }
 @media (max-width: 540px) {
@@ -1943,6 +2117,15 @@ input[type="number"] {
   .header__search {
     padding: 15px 0;
     height: unset;
+  }
+
+  .travel-slider__descr {
+    background-image: none !important;
+    min-height: 140px;
+    padding: 0 0 0 20px;
+  }
+  .travel-slider__descr-title img {
+    display: none;
   }
 }
 @media (max-width: 450px) {
@@ -2014,5 +2197,66 @@ input[type="number"] {
   .image-slider .slick-arrow.prev-btn,
   .image-slider .slick-arrow.next-btn {
     top: 0;
+  }
+
+  .travel__subtitle .subtitle-right::before {
+    right: 85px;
+  }
+
+  .travel-slider__descr-subtitle::before {
+    left: 95px;
+  }
+
+  .travel-slider__btn {
+    padding-top: 20px;
+  }
+
+  .info__subtitle {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .info__title {
+    font-size: 35px;
+  }
+
+  .sleep-slider__img {
+    min-height: 550px;
+  }
+  .sleep-slider__descr {
+    min-height: 250px;
+  }
+  .sleep-slider__descr-subtitle::before {
+    left: 90px;
+  }
+  .sleep-slider__descr-list {
+    display: none;
+  }
+  .sleep-slider__btn {
+    padding-top: 20px;
+  }
+
+  .sleep__subtitle .subtitle-right::before {
+    right: 105px;
+  }
+
+  .shop-slider__info {
+    padding: 50px 10px 0 10px;
+  }
+  .shop-slider__info-subtitle::before {
+    left: 70px;
+  }
+  .shop-slider__info-title {
+    font-size: 35px;
+  }
+  .shop-slider__extras-box {
+    min-width: 0;
+    max-height: 340px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .shop-slider__extras-itemtitle {
+    font-size: 16px;
+    letter-spacing: 5px;
   }
 }
